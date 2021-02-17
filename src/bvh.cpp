@@ -19,6 +19,10 @@
 
 #include <vector>
 
+#ifndef AT_CHECK
+#define AT_CHECK TORCH_CHECK
+#endif
+
 void bvh_cuda_forward(at::Tensor triangles, at::Tensor *collision_tensor_ptr,
                       int max_collisions = 16);
 
